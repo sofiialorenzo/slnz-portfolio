@@ -14,35 +14,40 @@ import NodeIcon from '../../icons/NodeIcon';
 import PhpIcon from '../../icons/PhpIcon';
 import VueIcon from '../../icons/VueIcon';
 import WpIcon from '../../icons/WpIcon';
+import { li } from 'framer-motion/client';
 
 function Skills () {
     return(
-        <section className="flex items-center">
+        <div className="flex-2">
             <div className="py-8 px-16 max-w-2xl mx-auto">
-            <h2 className="font-bold text-2xl pb-4">Habilidades</h2>
-            <div className='my-4'>
-            <ul className='flex inline-flex flex-wrap gap-8'>
-                <li className='flex gap-2'><HtmlIcon /> <span>HTML</span> </li>
-                <li className='flex gap-2'><CssIcon /> <span>CSS</span> </li>
-                <li className='flex gap-2'><JsIcon /> <span>JavaScript</span> </li>
-                <li className='flex gap-2'><PhpIcon /> <span>PHP</span></li>
-                <li className='flex gap-2'><NodeIcon /> <span>Node</span></li>
-                <li className='flex gap-2'><ReactIcon /> <span>React</span></li>
-                <li className='flex gap-2'><VueIcon /> <span>Vue</span></li>
-                <li className='flex gap-2'><AstroIcon /> <span>Astro</span></li>
-                <li className='flex gap-2'><LaravelIcon /> <span>Laravel</span></li>
-                <li className='flex gap-2'><FigmaIcon /> <span>Figma</span></li>
-                <li className='flex gap-2'><WpIcon /> <span>Wordpress</span></li>
-                <li className='flex gap-2'><TailwindIcon /> <span>Tailwind</span></li>
-                <li className='flex gap-2'><BootstrapIcon /> <span>Bootstrap</span></li>
-                <li className='flex gap-2'><MysqlIcon /> <span>MySQL</span></li>
-                <li className='flex gap-2'><MongoIcon /> <span>MongoDB</span></li>
-                <li className='flex gap-2'><GithubIcon /> <span>GitHub</span></li>
-
+            <h3 className="font-bold text-xl pb-4">Habilidades</h3>
+            <ul className='flex flex-wrap gap-8'>
+                {[
+                    { icon: <HtmlIcon />, label: 'HTML5'},
+                    { icon: <CssIcon />, label: 'CSS3'},
+                    { icon: <JsIcon />, label: 'JavaScript'},
+                    { icon: <PhpIcon />, label: 'PHP'},
+                    { icon: <NodeIcon />, label: 'Node'},
+                    { icon: <ReactIcon />, label: 'React'},
+                    { icon: <VueIcon />, label: 'Vue'},
+                    { icon: <AstroIcon />, label: 'Astro'},
+                    { icon: <LaravelIcon />, label: 'Laravel'},
+                    { icon: <FigmaIcon />, label: 'Figma'},
+                    { icon: <WpIcon />, label: 'Wordpress'},
+                    { icon: <TailwindIcon />, label: 'Tailwind'},
+                    { icon: <BootstrapIcon />, label: 'Bootstrap'},
+                    { icon: <MysqlIcon />, label: 'MySQL'},
+                    { icon: <MongoIcon />, label: 'MongoDB'},
+                    { icon: <GithubIcon />, label: 'Github'},
+                ].map((skill, index) => (
+                    <li key={index} className='relative group flex flex-col items-center transition duration-200'>
+                        <div className='mb-2 w-6 h-6'>{skill.icon}</div>
+                        <span className='absolute mt-6 text-xs text-gray-600 px-2 transform translate-y-3 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out'>{skill.label}</span>
+                    </li>
+                ))}
             </ul>
             </div>
-            </div>
-        </section>
+        </div>
     )
 }
 

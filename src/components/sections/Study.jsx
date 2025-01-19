@@ -1,8 +1,8 @@
 function Study () {
     return(
-        <section className="flex justify-center items-center">
+        <div className="flex-2">
             <div className="py-8 px-16 max-w-2xl mx-auto">
-                <h2 className="font-bold text-2xl pb-4">Educación</h2>
+                <h3 className="font-bold text-xl pb-4">Educación</h3>
                 <div>
                     <ul className="flex flex-col gap-4">
                         <li>
@@ -34,7 +34,7 @@ function Study () {
                     </ul>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
 

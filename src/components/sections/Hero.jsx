@@ -3,9 +3,9 @@ import WorldIcon from '../../icons/WorldIcon';
 
 function Hero() {
   return (
-    <section className="w-screen h-screen flex justify-center items-center" id="Hero">
-      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 py-8 px-4 max-w-5xl mx-auto">
-        <div className="text-center md:text-left">
+    <section className="h-screen flex justify-center items-center" id="Hero">
+      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 pt-8 px-4 mx-auto">
+        <div className="text-center md:text-left mr-32">
           <h1 className="font-bold text-3xl md:text-5xl pb-4">Sofía Lorenzo</h1>
           <p className="pb-2 font-medium text-lg md:text-lx">Desarrolladora Frontend | Diseñadora UX/UI</p>
           <span className="flex items-center justify-center md:justify-start font-normal text-gray-600">
