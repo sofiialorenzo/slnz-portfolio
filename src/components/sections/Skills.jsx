@@ -14,14 +14,14 @@ import NodeIcon from '../../icons/NodeIcon';
 import PhpIcon from '../../icons/PhpIcon';
 import VueIcon from '../../icons/VueIcon';
 import WpIcon from '../../icons/WpIcon';
-import { li } from 'framer-motion/client';
+import { motion } from "framer-motion";
 
 function Skills () {
     return(
         <div className="flex-2">
-            <div className="py-8 px-16 max-w-2xl mx-auto">
+            <div className="py-8 px-16 mx-auto">
             <h3 className="font-bold text-xl pb-4">Habilidades</h3>
-            <ul className='flex flex-wrap gap-8'>
+            <ul className='flex flex-wrap gap-8 mt-2'>
                 {[
                     { icon: <HtmlIcon />, label: 'HTML5'},
                     { icon: <CssIcon />, label: 'CSS3'},
@@ -41,7 +41,7 @@ function Skills () {
                     { icon: <GithubIcon />, label: 'Github'},
                 ].map((skill, index) => (
                     <li key={index} className='relative group flex flex-col items-center transition duration-200'>
-                        <div className='mb-2 w-6 h-6'>{skill.icon}</div>
+                        <motion.div className='mb-2 w-6 h-6' whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>{skill.icon}</motion.div>
                         <span className='absolute mt-6 text-xs text-gray-600 px-2 transform translate-y-3 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out'>{skill.label}</span>
                     </li>
                 ))}
