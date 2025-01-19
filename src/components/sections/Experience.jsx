@@ -5,7 +5,7 @@ const listAnimation = {
         opacity: 1,
         y: 0,
         transition: {
-            duration: 0.5,
+            duration: 1,
             staggerChildren: 0.3,
         },
     },
@@ -13,12 +13,12 @@ const listAnimation = {
 
 const itemAnimation = {
     hidden: { opacity: 0, y: 20},
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5}},
+    visible: { opacity: 1, y: 0, transition: { duration: 1}},
 };
 
 function Experience () {
     return (
-        <motion.section className="flex justify-center items-center flex-col" initial={{ opacity: 0, x: 100 }}
+        <motion.section className="flex justify-center items-center flex-col py-16" initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.8 }}>
