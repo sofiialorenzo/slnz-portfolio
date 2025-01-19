@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Nav from './components/Nav';
+import Footer from './components/Footer';
 import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Experience from './components/sections/Experience';
@@ -19,6 +20,7 @@ function App() {
       <Projects />
       <Contact />
       </main>
+      <Footer />
     </body>
   );
 }
