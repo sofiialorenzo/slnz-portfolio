@@ -50,7 +50,7 @@ function Experience () {
                                     <h3 className="font-bold text-xl text-gray-900">Atención al cliente</h3>
                                     <p className="font-medium text-lg text-gray-600">Bazar y regalos - Puerto Madryn, Chubut</p>
                                 </div>
-                                <time className="text-gray-600 text-sm">2021 - 2022</time>
+                                <time className="text-gray-600 text-sm">2020 - 2022</time>
                                 </header>
                             </article>
                             <footer>

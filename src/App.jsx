@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ThemeProvider } from './context/ThemeContext'; 
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Hero from './components/sections/Hero';
@@ -7,12 +7,12 @@ import Experience from './components/sections/Experience';
 import Projects from './components/sections/Projects';
 import Contact from './components/sections/Contact';
 
-function App() {
-  const [darkMode, setDarkMode] = useState(false);
 
+function App() {
   return (
-    <body className={`${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"}`}>
-      <Nav darkMode={darkMode} setDarkMode={setDarkMode} />
+    <ThemeProvider>
+      <div style={{ backgroundColor: "var(--bg-color)"}}>
+      <Nav />
       <main>
       <Hero />
       <About />
@@ -21,7 +21,8 @@ function App() {
       <Contact />
       </main>
       <Footer />
-    </body>
+      </div>
+      </ThemeProvider>
   );
 }
 

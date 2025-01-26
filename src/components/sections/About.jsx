@@ -10,10 +10,10 @@ function About() {
       transition={{ duration: 0.8 }}>
         <div className="pb-8 px-16 max-w-4xl mx-auto">
           <div className="flex items-center w-full">
-          <h2 className="font-bold text-3xl tracking-wide">Sobre mí</h2>
-          <hr className="flex-grow border-2 border-violet-800 mx-4"/>
+          <h2 className="font-bold text-3xl tracking-wide" style={{ color: "var(--headingTwo-color)"}}>Sobre mí</h2>
+          <hr className="flex-grow border-2 mx-4" style={{ borderColor: "var(--border-color)"}}/>
           </div>
-          <p className="text-gray-800 mt-4 leading-relaxed">
+          <p className="mt-4 leading-relaxed" style={{ color: "var(--text-color)"}}>
           Me especializo en Desarrollo Front End y Diseño UX/UI, con un fuerte interés en crear interfaces intuitivas y funcionales. Combino mi creatividad con habilidades técnicas para desarrollar productos digitales que aporten valor.
           Busco oportunidades que me permitan crecer profesionalmente y aplicar mis conocimientos para generar soluciones digitales de calidad.
           </p>

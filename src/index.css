@@ -7,3 +7,40 @@
     margin: 0;
 }
 
+:root {
+    --bg-color: #ffffff;
+    --span-color: #4a5565;
+    --text-color: #1e2939;
+    --headingTwo-color: #101828;
+    --headingOne-color: #00598a;
+    --border-color: #024a70;
+}
+
+[data-theme="dark"] {
+    --bg-color: #101828;
+    --span-color: #cad5e2;
+    --text-color: #f8fafc;
+    --headingTwo-color: #ffffff;
+    --headingOne-color: #8ec5ff;
+    --border-color: #51a2ff;
+
+}
+
+[data-theme="pastel"] {
+    --bg-color: #fce7f3;
+    --span-color: #4a5565;
+    --text-color: #1e2939;
+    --headingTwo-color: #101828;
+    --headingOne-color: #8b0836;
+    --border-color: #a50036;
+}
+
+[data-theme="earthy"] {
+    --bg-color: #ede0d4;
+    --span-color: #784521;
+    --text-color: #53341D;
+    --headingTwo-color: #362112;
+    --headingOne-color: #024938;
+    --border-color: #004f3b;
+}
+

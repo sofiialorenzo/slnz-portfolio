@@ -14,10 +14,10 @@ function Contact () {
                     <a href="https://www.linkedin.com/in/soffialorenzo/" title="Visitar el perfil de Sofía Lorenzo en LinkedIn" target="_blank" rel="noopener noreferrer"><LinkedinIcon className="w-6 h-6 text-violet-800" /></a>
                 </li>
                 <li className='hover:scale-110 transition-tranform'>
-                    <a href="https://www.behance.net/soffialorenzo" title="Visitar el perfil de Sofía Lorenzo en Behance" target="_blank" rel="noopener noreferrer" ><BehanceIcon className="w-6 h-6 text-violet-800" /></a>
+                    <a href="https://www.behance.net/soffialorenzo" title="Visitar el perfil de Sofía Lorenzo en Behance" target="_blank" rel="noopener noreferrer" ><BehanceIcon className="w-6 h-6" /></a>
                 </li>
                 <li className='hover:scale-110 transition-tranform'>
-                    <a href="https://github.com/sofiialorenzo" title="Visitar el perfil de Sofía Lorenzo en Github" target="_blank" rel="noopener noreferrer"><GithubIcon className="w-6 h-6 text-violet-800" /></a>
+                    <a href="https://github.com/sofiialorenzo" title="Visitar el perfil de Sofía Lorenzo en Github" target="_blank" rel="noopener noreferrer"><GithubIcon className="w-6 h-6" /></a>
                 </li>
                     </ul>
         </section>

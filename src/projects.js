@@ -13,8 +13,8 @@ const projects = [
         "name": "BrewHouse",
         "isActive": true,
         "description": "Landing page de cafetería de esécialidad",
-        "highlights": ["Figma", "Wordpress"],
-        "url": "https://www.behance.net/gallery/216825039/BrewHouse-Landing-page",
+        "highlights": ["HTML", "CSS", "JavaScript", "Tailwind"],
+        "url": "https://brewhousecoffee.netlify.app/",
     },
 
     {
