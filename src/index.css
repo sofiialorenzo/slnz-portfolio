@@ -2,13 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
+    font-family: "Inter Tight", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 :root {
     --bg-color: #ffffff;
+    --bgTwo-color: #e5e7eb;
     --span-color: #4a5565;
     --text-color: #1e2939;
     --headingTwo-color: #101828;
@@ -18,6 +24,7 @@
 
 [data-theme="dark"] {
     --bg-color: #101828;
+    --bgTwo-color: #4a5565;
     --span-color: #cad5e2;
     --text-color: #f8fafc;
     --headingTwo-color: #ffffff;
@@ -28,6 +35,7 @@
 
 [data-theme="pink"] {
     --bg-color: #fce7f3;
+    --bgTwo-color: #fccee8;
     --span-color: #4a5565;
     --text-color: #1e2939;
     --headingTwo-color: #101828;
@@ -37,8 +45,9 @@
 
 [data-theme="earthy"] {
     --bg-color: #ede0d4;
+    --bgTwo-color: #ebcbad;
     --span-color: #784521;
-    --text-color: #53341D;
+    --text-color: #452b18;
     --headingTwo-color: #362112;
     --headingOne-color: #024938;
     --border-color: #004f3b;

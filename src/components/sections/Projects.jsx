@@ -26,20 +26,20 @@ const itemAnimations = {
 function Projects() {
     return (
         <motion.section
-            className="flex justify-center items-center flex-col pb-20"
+            className="flex justify-center items-center flex-col py-16"
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8 }}
         >
-            <div className="py-8 px-8 sm:px-16 max-w-5xl mx-auto">
+            <div className="py-12 px-8 sm:px-16 max-w-5xl mx-auto">
                 <h2
-                    className="text-3xl font-bold pb-6 tracking-tight"
+                    className="font-bold text-2xl md:text-3xl tracking-wide"
                     style={{ color: "var(--headingTwo-color)" }}
                 >
                     Proyectos
                 </h2>
-                <motion.div initial="hidden" whileInView="visible" variants={listAnimations}>
+                <motion.div initial="hidden" whileInView="visible" variants={listAnimations} className="max-w-5xl w-full mt-12">
                     <motion.ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {projects.map((project) => (
                             <motion.li
@@ -73,8 +73,8 @@ function Projects() {
                                     {project.highlights.map((highlight, index) => (
                                         <span
                                             key={index}
-                                            className="bg-gray-100 text-xs py-1 px-2 rounded-full"
-                                            style={{ color: "var(--span-color)" }}
+                                            className="text-xs py-1 px-2 rounded-full"
+                                            style={{ color: "var(--span-color)", backgroundColor: "var(--bgTwo-color)" }}
                                         >
                                             {highlight}
                                         </span>

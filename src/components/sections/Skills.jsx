@@ -41,7 +41,7 @@ function Skills () {
                     { icon: <GithubIcon />, label: 'Github'},
                 ].map((skill, index) => (
                     <li key={index} className='relative group flex flex-col items-center transition duration-200'>
-                        <motion.div className='mb-2 w-6 h-6' whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>{skill.icon}</motion.div>
+                        <motion.div className='mb-2 w-6 h-6' whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }} style={{ fill: "var(--text-color)"}}>{skill.icon}</motion.div>
                         <span className='absolute mt-6 text-xs px-2 transform translate-y-3 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out' style={{ color: "var(--span-color)"}}>{skill.label}</span>
                     </li>
                 ))}

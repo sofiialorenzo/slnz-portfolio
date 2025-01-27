@@ -12,7 +12,7 @@ const projects = [
         "id": 2,
         "name": "BrewHouse",
         "isActive": true,
-        "description": "Landing page de cafetería de esécialidad",
+        "description": "Landing page de cafetería de especialidad",
         "highlights": ["HTML", "CSS", "JavaScript", "Tailwind"],
         "url": "https://brewhousecoffee.netlify.app/",
     },
@@ -23,7 +23,7 @@ const projects = [
         "isActive": false,
         "description": "One page de la serie Gossip Girl",
         "highlights": ["HTML", "CSS"],
-        "url": "https://github.com/sofiialorenzo/gossip-girl",
+        "url": "",
     },
 ];
 
