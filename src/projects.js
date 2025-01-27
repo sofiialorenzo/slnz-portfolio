@@ -1,11 +1,11 @@
 const projects = [
     {
         "id": 1,
-        "name": "Pristine",
+        "name": "Lunaria",
         "isActive": true,
         "description": "Ecommerce de artículos de belleza",
         "highlights": ["PHP", "MySQL", "TailwindCSS"],
-        "url": "https://github.com/sofiialorenzo/Pristine-Ecommerce",
+        "url": "https://github.com/sofiialorenzo/Lunaria-Ecommerce",
     },
 
     {
