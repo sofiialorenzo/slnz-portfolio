@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import projects from '../../projects';
 
 const listAnimations = {
@@ -24,14 +25,21 @@ const itemAnimations = {
 };
 
 function Projects() {
+const [shouldAnimate, setShouldAnimate] = useState(window.innerWidth >= 768);
+
+useEffect(() => {
+    const handleResize = () => {
+        setShouldAnimate(window.innerWidth >= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+}, []);
+
+
     return (
-        <motion.section
-            className="flex justify-center items-center flex-col pb-16"
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.8 }}
-        >
+        <section
+            className="flex justify-center items-center flex-col pb-16 overflow-hidden">
             <div className="py-12 px-8 sm:px-16 max-w-5xl mx-auto">
                 <h2
                     className="font-bold text-2xl md:text-3xl tracking-wide"
@@ -39,13 +47,13 @@ function Projects() {
                 >
                     Proyectos
                 </h2>
-                <motion.div initial="hidden" whileInView="visible" variants={listAnimations} className="max-w-5xl w-full mt-12">
+                <motion.div initial={shouldAnimate ? "hidden" : undefined} whileInView={shouldAnimate ? "visible" : undefined} variants={shouldAnimate ? listAnimations : undefined} className="max-w-5xl w-full mt-12">
                     <motion.ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {projects.map((project) => (
                             <motion.li
                                 className="flex flex-col justify-between border rounded-lg shadow-xs hover:shadow-md transition-all p-6" style={{ borderColor: "var(--border-color)" }}
                                 key={project.id}
-                                variants={itemAnimations}
+                                variants={shouldAnimate ? itemAnimations : undefined}
                                 whileHover={{
                                     scale: 1,
                                     transition: { duration: 0.3, ease: "easeOut" },
@@ -85,7 +93,7 @@ function Projects() {
                     </motion.ul>
                 </motion.div>
             </div>
-        </motion.section>
+        </section>
     );
 }
 

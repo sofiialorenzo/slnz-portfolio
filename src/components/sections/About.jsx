@@ -1,15 +1,27 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import Skills from "./Skills";
 import Study from "./Study";
 
 function About() {
+const [shouldAnimate, setShouldAnimate] = useState(window.innerWidth >= 768);
+
+useEffect(() => {
+  const handleResize = () => {
+    setShouldAnimate(window.innerWidth >= 768);
+  };
+
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
+
   return (
     <motion.section
       className="flex justify-center items-center flex-col"
-      initial={{ opacity: 0, x: -100 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, amount: 0.5 }}
-      transition={{ duration: 0.8 }}
+      initial={ shouldAnimate ? { opacity: 0, x: -100 } : undefined}
+      whileInView={ shouldAnimate ?{ opacity: 1, x: 0 } : undefined}
+      viewport={shouldAnimate ? { once: true, amount: 0.5 } : undefined}
+      transition={shouldAnimate ?{ duration: 0.8 } : undefined}
     >
       <div className="max-w-5xl px-8 md:px-16 mx-auto">
         <div className="flex flex-col md:flex-row md:items-center w-full mb-6 gap-4">

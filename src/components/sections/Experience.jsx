@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const listAnimation = {
   hidden: { opacity: 0, y: 50 },
@@ -35,14 +36,21 @@ const experiences = [
 ];
 
 function Experience() {
+const [shouldAnimate, setShouldAnimate] = useState(window.innerWidth >= 768);
+
+useEffect(() => {
+  const handleResize = () => {
+    setShouldAnimate(window.innerWidth >= 768);
+  };
+
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
+
+
   return (
-    <motion.section
-      className="flex justify-center items-center flex-col py-16"
-      initial={{ opacity: 0, x: 100 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, amount: 0.5 }}
-      transition={{ duration: 0.8 }}
-    >
+    <section
+      className="flex justify-center items-center flex-col py-16">
       <div className="py-12 px-8 sm:px-16 max-w-5xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-center w-full mb-6 gap-4">
           <h2
@@ -57,12 +65,12 @@ function Experience() {
           />
         </div>
 
-        <motion.div initial="hidden" whileInView="visible" variants={listAnimation}>
+        <motion.div initial={shouldAnimate ? "hidden" : undefined} whileInView={shouldAnimate ? "visible" : undefined } variants={shouldAnimate ? listAnimation : undefined}>
           <motion.ul className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {experiences.map((exp, index) => (
               <motion.li
                 key={index}
-                variants={itemAnimation}
+                variants={shouldAnimate ? itemAnimation : undefined}
                 className="p-6 rounded-2xl border shadow-sm"
                 style={{ borderColor: "var(--border-color)" }}
               >
@@ -101,7 +109,7 @@ function Experience() {
           </motion.ul>
         </motion.div>
       </div>
-    </motion.section>
+    </section>
   );
 }
 

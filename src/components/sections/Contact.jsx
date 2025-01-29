@@ -6,10 +6,10 @@ import BehanceIcon from "../../icons/BehanceIcon";
 function Contact() {
     return (
         <section
-            className="md:fixed md:left-4 md:top-1/2 md:transform md:-translate-y-1/2 md:flex md:flex-col md:items-center md:space-y-6 
-            flex justify-center mt-4 md:mt-0"
+            className="md:relative lg:fixed lg:left-4 lg:top-1/2 lg:transform lg:-translate-y-1/2 
+    lg:flex lg:flex-col lg:items-center lg:space-y-6 flex justify-center mt-4 lg:mt-0"
         >
-            <ul className="flex md:flex-col items-center flex-row gap-6 md:gap-6">
+            <ul className="flex lg:flex-col items-center flex-row gap-6 lg:gap-6">
                 <li className="hover:scale-110 transition-transform">
                     <a
                         href="mailto:sofialorenzo.work@gmail.com"
