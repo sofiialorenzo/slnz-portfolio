@@ -23,7 +23,7 @@ const projects = [
         "isActive": false,
         "description": "One page de la serie Gossip Girl",
         "highlights": ["HTML", "CSS"],
-        "url": "",
+        "url": "https://gossipgirl-fanpage.netlify.app/",
     },
 ];
 

@@ -5,7 +5,7 @@ import Contact from "./Contact";
 function Hero() {
   return (
     <section
-  className="h-screen flex flex-col justify-center items-center px-4 sm:px-8"
+  className="relative h-screen flex flex-col justify-center items-center px-4 sm:px-8"
   id="Hero"
 >
   <div className="flex flex-col md:flex-row items-center gap-8 sm:gap-12 md:gap-20 max-w-4xl mx-auto">
@@ -20,15 +20,15 @@ function Hero() {
         <WorldIcon className="w-5 h-5 mr-2" />
         Buenos Aires, Argentina
       </span>
+
+      <div className="flex justify-center md:justify-start mt-2">
+    <Contact />
+      </div>
     </div>
 
     <figure className="relative w-36 h-36 sm:w-44 sm:h-44 md:w-64 md:h-64 flex-shrink-0 rounded-full">
       <img src={ImgSofia} alt="Sofía Lorenzo" className="rounded-full object-cover border-4 w-60" style={{ borderColor: "var(--border-color)" }} />
     </figure>
-  </div>
-
-  <div className="mt-4 md:mt-6">
-    <Contact />
   </div>
 </section>
   );
