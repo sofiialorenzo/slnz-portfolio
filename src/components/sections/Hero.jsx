@@ -1,4 +1,4 @@
-import ImgSofia from "../../assets/sofia_lorenzo.jpg";
+import ImgSofia from "../../assets/Sofia_Lorenzo.jpg";
 import WorldIcon from "../../icons/WorldIcon";
 import Contact from "./Contact";
 

@@ -26,7 +26,7 @@ const itemAnimations = {
 function Projects() {
     return (
         <motion.section
-            className="flex justify-center items-center flex-col py-16"
+            className="flex justify-center items-center flex-col pb-16"
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.5 }}
